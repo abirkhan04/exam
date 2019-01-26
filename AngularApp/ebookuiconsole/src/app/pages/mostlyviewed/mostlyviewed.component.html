@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">description</th>
+            <th scope="col">searchCounter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of booklist">
+            <th scope="row">{{book.id}}</th>
+            <td>{{book.title}}</td>
+            <td>{{book.description}}</td>
+            <td>{{book.searchCounter}}</td>
+          </tr>   
+        </tbody>
+      </table>
+</div>

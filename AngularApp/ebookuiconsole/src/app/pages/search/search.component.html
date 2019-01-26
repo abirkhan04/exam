@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Search Book By Title</h4>
+	<form [formGroup]="searchBookForm">
+	<div class="form-group input-group">
+        <input  formControlName="title" class="form-control" placeholder="title" type="text">
+    </div> <!-- form-group// --> 
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-block" (click)="searchBookSubmit()">Search Book</button>
+    </div> <!-- form-group// -->                                                                   
+  </form>
+</article>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Field Name</th>
+        <th scope="col">Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Title</td>
+            <td>{{ebook.title}}</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>description</td>
+            <td>{{ebook.description}}</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Cover Image Name</td>
+            <td>{{ebook.coverimagename}}</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Pdf Name</td>
+            <td>{{ebook.pdfname}}</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Category</td>
+            <td>{{ebook.category}}</td>
+        </tr>
+    </tbody>
+  </table>

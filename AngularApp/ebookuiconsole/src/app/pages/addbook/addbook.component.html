@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="card bg-light">
+        <div style="margin-top: 50px; text-align: center;" class="alert alert-success" role="alert" *ngIf="ebookaddsucess">
+               {{ebookaddsucessmsg}}
+        </div>
+        <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Create Account</h4>
+                <form [formGroup]="addBookForm">
+                        <div class="form-group input-group">
+                                <input formControlName="title" class="form-control" placeholder="Title" type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                                <input formControlName="description" class="form-control" placeholder="Description"
+                                        type="email">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                                <input formControlName="coverimagename" class="form-control" placeholder="Cover Image Name"
+                                        type="email">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                                <input formControlName="pdfname" class="form-control" placeholder="Pdf name" type="email">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                                <input formControlName="category" class="form-control" placeholder="Category" type="email">
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                                <button type="button" class="btn btn-primary btn-block" (click)="addBookSubmit()">Add
+                                        Book</button>
+                        </div> <!-- form-group// -->
+                </form>
+        </article>

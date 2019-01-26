@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h2>Form Login</h2>
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+      <input type="text" id="login" class="fadeIn second" name="login" formControlName="email" placeholder="Email">
+      <input type="text" id="password" class="fadeIn third" name="login" formControlName="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+  </div>
+</div>
